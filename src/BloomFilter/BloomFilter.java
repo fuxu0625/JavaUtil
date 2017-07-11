@@ -3,7 +3,19 @@ package BloomFilter;
 import java.util.BitSet;
 
 /**
- * BloomFilter算法去重策略
+ * BloomFilter算法去重策略<br>
+ * Bloom-Filter，布隆过滤器。可以用于检索一个元素是否在一个集合中的快速的概率算法。<br>
+ * 是一种空间效率很高的随机数据结构，利用位数组很简洁地表示一个集合，并能判断一个元素是否属于这个集合。<br>
+ * 优点:是空间效率和查询时间都远远超过一般的算法。<br>
+ * 缺点:是有一定的误识别率和删除困难。<br>
+ * ---------------------------------------
+ * <p>
+ * 可应用场景： 1、垃圾邮件地址过滤<br>
+ * 2、广播消息时，可以检测某个IP是否已发包。 <br>
+ * 3、检测广播消息包的环路，将Bloom Filter保存在包里，每个节点将自己添加入Bloom Filter <br>
+ * 4、信息队列管理，使用Counter Bloom Filter管理信息流量。<br>
+ * <p>
+ * 给你A,B两个文件，各存放50亿条URL，每条URL占用64字节，内存限制是4G，让你找出A,B文件共同的URL。如果是三个乃至n个文件呢？
  */
 public class BloomFilter {
 
@@ -11,7 +23,7 @@ public class BloomFilter {
     private static final int DEFAULT_SIZE = 1 << 25;
 
     /* 不同哈希函数的种子，一般应取质数 */
-    private static final int[] seeds = new int[] { 5, 7, 11, 13, 31, 37, 61 };
+    private static final int[] seeds = new int[]{5, 7, 11, 13, 31, 37, 61};
 
     private BitSet bits = new BitSet(DEFAULT_SIZE);
 
