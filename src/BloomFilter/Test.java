@@ -26,7 +26,7 @@ public class Test {
             }
 
             filter.add(URLS[i]);
-            System.out.println("add:"+URLS[i]);
+            System.out.println("add:" + URLS[i]);
         }
     }
 
