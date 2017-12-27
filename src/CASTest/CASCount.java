@@ -1,9 +1,8 @@
 package CASTest;
 
 /**
- *@author  fx
- * CAS
- *
+ * @author fx
+ *         CAS
  */
 public class CASCount implements Runnable {
 
