@@ -1,0 +1,6 @@
+_Store
+.idea
+*.iml
+out
+/bin/
+Thumb.db
